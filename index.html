@@ -53,6 +53,95 @@
     <img src="logo-ifremer.png.png" alt="IFREMER" />
     <img src="logo%20iuem.png" alt="IUEM" />
   </div>
+  <!-- Styles à placer dans la section <style> de ton <head> -->
+<style>
+  /* Navigation */
+  .navbar {
+    background: #2b6cb0;
+    padding: 0.5rem 2rem;
+  }
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .navbar li {
+    margin-right: 1.5rem;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.2s;
+  }
+  .navbar a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+  }
+</style>
+<style>
+  /* Navigation */
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .navbar li {
+    margin-right: 1.5rem;
+  }
+  /* Pousse le contact à droite */
+  .navbar li.contact {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .navbar a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+  }
+  /* Icône enveloppe blanche et petite */
+  .navbar a svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+    fill: #fff;
+  }
+</style>
+
+<!-- HTML à coller juste après ta <div class="logo-container"> -->
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="#">Qui sommes-nous&nbsp;?</a></li>
+    <li><a href="#">La méthode et ses usages</a></li>
+    <li><a href="#">Outils et ressources</a></li>
+    <li class="contact">
+      <a href="mailto:contact@exemple.com">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm16 2.99L12 14 4 6.99V20h16V6.99z"/>
+        </svg>
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
   <h1>Indicateurs de durabilité des entreprises conchylicoles</h1>
   <div class="accordion">
 
@@ -71,18 +160,18 @@
       <button class="header">2. Dimension environnementale (6 composantes)</button>
       <div class="content">
         <div class="subsection">
-          <button class="header">• Diversité fonctionnelle (3 indicateurs)</button>
+          <button class="header">• Diversité fonctionnelle (2 indicateurs)</button>
           <div class="content">
             <p><em>Cette composante cherche à savoir si l’exploitation participe à la protection de la diversité biologique ou si, au contraire, ses pratiques risquent d’altérer les équilibres naturels en modifiant la composition des espèces présentes dans le milieu. Elle s’intéresse à la question suivante : l’exploitation prend-elle en compte la biodiversité dans ses choix d’espèces et de naissain ? Le but est d’évaluer l’attention portée à la diversité des espèces élevées, à l’origine du naissain (naturel ou issu d’écloserie) et leurs éventuels impacts sur l’environnement.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
             <div class="indicator-box">Diversité des espèces cultivées (2 items)</div>
             <div class="indicator-box">Origine du naissain (2 items)</div>
-            <div class="indicator-box">Bouclage des flux d’énergie par autonomie (1 item)</div>
+         
           </div>
         </div>
         <div class="subsection">
           <button class="header">• Bouclage des flux d’énergie par autonomie (1 indicateur)</button>
-          <div class="content">
+	<div class="content">
             <p><em>Cette composante mesure les efforts entrepris par l'exploitation pour limiter sa dépendance énergétique et réduire les flux entrants. L’objectif est d’identifier les leviers de réduction de la consommation énergétique en se posant la question : l’exploitation cherche-t-elle à limiter sa dépendance aux ressources extérieures ? Il s’agit ici de voir si elle développe une certaine autonomie en énergie.</em></p>
             <h3 class="indicators-title">Indicateur :</h3>
             <div class="indicator-box">Autonomie en énergie (1 item)</div>
@@ -93,8 +182,8 @@
           <div class="content">
             <p><em>Cette composante a pour objectif de mesurer la capacité de l'exploitation à limiter sa consommation en ressources, en particulier celles qui sont non renouvelables ou polluantes. Elle pose la question suivante : l’exploitation met-elle en place des pratiques pour consommer moins ? Ici, il ne s’agit pas d’une question d’économie, mais bien d’une démarche de sobriété. Cela inclut par exemple l’attention portée à l’usage du plastique, à la consommation en énergie dans les déplacements et les équipements et aux pratiques adoptées pour réduire ces consommations dans le temps.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
-            <div class="indicator-box">Sobriété en matériaux non renouvelables (1 item)</div>
-            <div class="indicator-box">Consommation d'énergie (1 item)</div>
+            <div class="indicator-box">Sobriété en matériaux non renouvelables (plastiques) (1 item)</div>
+            <div class="indicator-box">Sobriété dans la consommation d'"énergie (1 item)</div>
           </div>
         </div>
         <div class="subsection">
@@ -104,7 +193,7 @@
             <h3 class="indicators-title">Indicateurs :</h3>
             <div class="indicator-box">Impacts sur fonds marins et sédiments (1 item)</div>
             <div class="indicator-box">Impacts sur la faune sauvage (2 items)</div>
-            <div class="indicator-box">Effet sur le changement climatique (1 item)</div>
+            <div class="indicator-box">Atténuation de l'effet des pratiques sur le changement climatique (1 item)</div>
           </div>
         </div>
         <div class="subsection">
@@ -112,7 +201,7 @@
           <div class="content">
             <p><em>Cette composante s’intéresse à la manière dont l’ostréiculteur gère les mortalités, les risques sanitaires et les conséquences environnementales qui peuvent y être liées. Elle s’intéresse à la question suivante : est-ce que l’exploitation met en œuvre des pratiques pour limiter les pertes et éviter qu’elles aient un impact négatif sur le milieu ? Cette composante a été ajoutée suite aux propos de plusieurs experts en pathologies des mollusques, qui ont insisté sur le fait que les mortalités massives peuvent en effet entraîner une accumulation de matière organique dans les parcs, perturber les équilibres biologiques, ou favoriser le développement d'agents pathogènes. La gestion zoosanitaire n’est donc pas uniquement une problématique de productivité, mais également un enjeu de santé environnementale.</em></p>
             <h3 class="indicators-title">Indicateur :</h3>
-            <div class="indicator-box">Mortalités et risques sanitaires (1 item)</div>
+            <div class="indicator-box">Mortalités (1 item)</div>
           </div>
         </div>
         <div class="subsection">
@@ -120,8 +209,8 @@
           <div class="content">
             <p><em>Cette composante interroge la manière dont l’exploitation mobilise l’espace naturel et la diversité des phases ou métiers de l’ostréiculture. Elle pose la question suivante : est-ce que l’exploitant déploie ses activités sur différents sites ou bassins, et dans quelle mesure il mobilise plusieurs savoir-faire du métier ? L’objectif est de mieux comprendre si l’activité repose sur un seul lieu ou au contraire sur plusieurs sites, voire plusieurs secteurs géographiques, ce qui peut modifier les pressions exercées sur l’environnement. Une occupation de l’espace étendue, diversifiée ou flexible peut avoir différents impacts sur l’environnement : elle peut permettre de limiter les surcharges locales, mais aussi multiplier les impacts si elle n’est pas bien répartie. Cette composante permet donc de replacer les pratiques spatiales et professionnelles dans une logique d’empreinte globale.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
-            <div class="indicator-box">Diversité des milieux exploités (1 item)</div>
-            <div class="indicator-box">Diversité des secteurs géographiques (1 item)</div>
+            <div class="indicator-box">Diversité des pratiques et des métiers (1 item)</div>
+            <div class="indicator-box">Diversité des milieux exploités (2 items)</div>
           </div>
         </div>
       </div>
@@ -136,45 +225,46 @@
           <div class="content">
             <p><em>Cette composante interroge le rôle de l’exploitation dans le système alimentaire. Elle cherche à savoir si l’exploitation contribue à nourrir la population, non seulement en quantité mais aussi en qualité. Cela passe par la manière dont le produit est valorisé et labellisé mais aussi par l’attention portée aux pratiques de transformation. Elle évalue également la capacité de l’exploitation à limiter le gaspillage, notamment à travers la gestion des sous-produits. Enfin cette composante questionne la relation avec les consommateurs : existe-t-il des formes de proximité, de confiance ou de lien entre ceux qui produisent et ceux qui consomment ?</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
-            <div class="indicator-box">Démarche de qualité (3 items)</div>
-            <div class="indicator-box">Limitation des pertes et gaspillage (multiple items)</div>
-            <div class="indicator-box">Liens sociaux, hédoniques et culturels (3 items)</div>
+            <div class="indicator-box">Démarche de qualité de la production alimentaire (3 items)</div>
+            <div class="indicator-box">Limitation des pertes et gaspillage (1 item)</div>
+            <div class="indicator-box">Liens sociaux, hédoniques et culturels à l'alimentation (3 items)</div>
           </div>
         </div>
         <div class="subsection">
-          <button class="header">• Développement local et économie circulaire (6 indicateurs)</button>
+          <button class="header">• Développement local et économie circulaire (7 indicateurs)</button>
           <div class="content">
             <p><em>Cette composante s’intéresse à la manière dont l’exploitation s’intègre dans les dynamiques de son territoire. Elle cherche à comprendre si l’ostréiculteur travaille en lien avec d’autres acteurs économiques ou publics, s’il mutualise certains équipements ou savoir-faire, et s’il participe à des démarches territoriales ou touristiques. Elle prend aussi les formes d’accueil ou d’ouverture au public et les efforts de valorisation du patrimoine local. Cette composante permet ainsi d’évaluer si l’exploitation contribue activement à une économie territoriale plus coopérative, plus sobre et plus circulaire.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
-            <div class="indicator-box">Démarches environnementales (1 item)</div>
+            <div class="indicator-box">Engagement dans des démarches environnementales contractualisée et territoriales (1 item)</div>
             <div class="indicator-box">Tourisme et accueil pédagogique (2 items)</div>
-            <div class="indicator-box">Valorisation par circuits courts (3 items)</div>
-            <div class="indicator-box">Valorisation des ressources locales (3 items)</div>
+            <div class="indicator-box">Valorisation par circuits courts ou de proximité (3 items)</div>
+            <div class="indicator-box">Valorisation des ressources locales (1 items)</div>
+	    <div class="indicator-box">Valorisation et qualité du patrimoine (4 items)</div>
             <div class="indicator-box">Gestion des déchets non-organiques (5 items)</div>
-            <div class="indicator-box">Réseaux d'innovation et mutualisation (2 items)</div>
+            <div class="indicator-box">Réseaux d'innovation et mutualisation du matériel (2 items)</div>
           </div>
         </div>
         <div class="subsection">
-          <button class="header">• Emploi et conditions de travail (4 indicateurs)</button>
+          <button class="header">• Emploi et qualité au travail (5 indicateurs)</button>
           <div class="content">
             <p><em>Cette composante explore la dimension humaine de l’activité ostréicole. Elle interroge les formes d'emploi générées par l’exploitation (permanents, saisonniers, familiaux), mais aussi les conditions dans lesquelles ce travail s’effectue. Elle évalue la répartition des tâches, l’intensité du travail, les périodes de forte charge, ainsi que le respect des principes d’un travail décent. Elle prend aussi en compte les dynamiques de formation, de transmission de savoir-faire, l’accueil de stagiaires ou d’apprentis, et les dispositifs d’entraide professionnelle. Au-delà des chiffres, cette composante cherche à saisir si le travail au sein de l’exploitation est source de stabilité, d’apprentissage et d’épanouissement ou au contraire s’il pèse sur la santé, le temps de vie ou la pérennité de l’activité.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
-            <div class="indicator-box">Contribution à l'emploi (3 items)</div>
+            <div class="indicator-box">Contribution à l'emploi et gestion du salariat (3 items)</div>
             <div class="indicator-box">Mutualisation du travail (2 items)</div>
-            <div class="indicator-box">Qualité de vie au travail (3 items)</div>
-            <div class="indicator-box">Hygiène et sécurité (2 items)</div>
+            <div class="indicator-box">Intensité et qualité de vie au travail (3 items)</div>
+            <div class="indicator-box">Accueil, hygiène et sécurité (2 items)</div>
+            <div class="indicator-box">Formation (3 items)</div>
           </div>
         </div>
         <div class="subsection">
-          <button class="header">• Éthique et développement humain (5 indicateurs)</button>
+          <button class="header">• Éthique et développement humain (4 indicateurs)</button>
           <div class="content">
             <p><em>Cette composante aborde la dimension sociale de l’exploitation. Elle cherche à savoir si l’ostréiculteur entretient des liens avec la société civile, s’il s’engage dans des actions solidaires, associatives ou éducatives, et s’il participe à faire reconnaître son métier. Elle évalue également la traçabilité des pratiques, l’ouverture aux autres, et la capacité à créer du lien autour de l’activité. Cette composante s’intéresse également au bien-être global de l’exploitant, à son isolement ou au contraire à son intégration dans des réseaux sociaux, professionnels ou territoriaux. Elle permet ainsi de mesurer dans quelle mesure l’exploitation, au-delà de sa production, prend part à un projet de société plus large et porteur de sens.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
-            <div class="indicator-box">Implication sociale territoriale et solidarité (1 item)</div>
-            <div class="indicator-box">Traçabilité (4 niveaux)</div>
+            <div class="indicator-box">Implication sociale territoriale et solidarité (5 items)</div>
+            <div class="indicator-box">Traçabilité (1 item)</div>
             <div class="indicator-box">Qualité de vie (1 item)</div>
             <div class="indicator-box">Isolement (2 items)</div>
-            <div class="indicator-box">Implication des citoyens (1 item)</div>
           </div>
         </div>
       </div>
@@ -218,24 +308,86 @@
             <p><em>Elle explore la capacité de l’exploitation à garder la maîtrise de ses choix économiques, de ses débouchés et de ses ressources. Elle questionne notamment la diversité des revenus et l’autonomie vis-à-vis des fournisseurs et des clients.</em></p>
             <h3 class="indicators-title">Indicateurs :</h3>
             <div class="indicator-box">Diversification productive (1 item)</div>
-            <div class="indicator-box">Diversité des clients (1 item)</div>
-            <div class="indicator-box">Diversité des fournisseurs (1 item)</div>
-            <div class="indicator-box">Qualité contractuelle (1 item)</div>
-            <div class="indicator-box">Contribution des revenus extérieurs (1 item)</div>
+            <div class="indicator-box">Diversification et relations contractuelles (4 items)</div>
+            <div class="indicator-box">Contribution des revenus extérieurs à l'indépendance de l'exploitation (1 item)</div>
           </div>
         </div>
       </div>
     </div>
 
+ <html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indicateurs de Durabilité Conchylicole</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
+    body { font-family: 'Lato', sans-serif; background: #f9fafb; color: #2d3748; margin: 0; padding: 2rem; line-height: 1.7; }
+
+    .logo-container { text-align: center; margin-bottom: 1rem; }
+    .logo-container img { height: 60px; margin: 0 1rem; vertical-align: middle; }
+
+    h1 { text-align: center; font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem; }
+    .accordion { max-width: 800px; margin: 0 auto; }
+    .section { background: #ffffff; border-radius: 8px; margin-bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; }
+    button.header { width: 100%; padding: 1rem 1.5rem; font-size: 1.25rem; font-weight: 600; background: #edf2f7; border: none; text-align: left; cursor: pointer; transition: background 0.2s; }
+    button.header:hover { background: #e2e8f0; }
+    .section.env > button.header { border-left: 4px solid #aed9e0; }
+    .section.socio > button.header { border-left: 4px solid #a3c4f3; }
+    .section.eco > button.header { border-left: 4px solid #f9d6a6; }
+    .content { display: none; padding: 1rem 1.5rem; border-top: 1px solid #e2e8f0; }
+    .content p { margin: 0.75rem 0; font-size: 1rem; }
+    .indicator-box { border: 1px dashed #cbd5e0; border-radius: 6px; padding: 0.75rem 1rem; margin: 0.5rem 0 0.5rem 1rem; background: rgba(255,255,255,0.8); }
+    h3.indicators-title { font-size: 1rem; font-weight: 600; margin: 1rem 0 0.5rem; }
+    /* Pastel backgrounds */
+    .section.env > .content { background: #e8f6f3; }
+    .section.env .subsection > button.header { background: #d4ebe7; }
+    .section.env .subsection > .content { background: #bde4d3; }
+    .section.socio > .content { background: #f0f4ff; }
+    .section.socio .subsection > button.header { background: #d6e0ff; }
+    .section.socio .subsection > .content { background: #c2cfff; }
+    .section.eco > .content { background: #fff8f0; }
+    .section.eco .subsection > button.header { background: #ffe5d1; }
+    .section.eco .subsection > .content { background: #ffd1a3; }
+    
+    /* Sections supplémentaires */
+    .additional { max-width: 800px; margin: 2rem auto; }
+    .additional h2 { font-size: 1.75rem; margin-top: 2rem; font-weight: 600; color: #2d3748; }
+    .additional h3 { font-size: 1.25rem; margin-top: 1.5rem; font-weight: 600; color: #2d3748; }
+    .additional .doc { background: #ffffff; border-radius: 6px; padding: 1rem; margin: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .additional .doc h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .additional a.download { display: inline-block; margin-top: 0.5rem; font-weight: 600; color: #2b6cb0; text-decoration: none; }
+    .additional a.download:hover { text-decoration: underline; }
+    .partners { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+    .partners img { height: 50px; }
+
+    /* Footer */
+    footer { text-align: center; margin-top: 3rem; font-size: 0.9rem; color: #718096; }
+    .footer-links { list-style: none; padding: 0; margin: 0.5rem 0 1rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-links li { display: inline; }
+    .footer-links a { color: #2b6cb0; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+    <!-- Sections existantes ... -->
   </div>
-  <div class="extra">
-    <p>Téléchargez le guide d'utilisation <a href="#">ici</a></p>
-    <p>S'autoévaluer : <a href="#">Particulier</a> - <a href="#">Entreprise</a></p>
-    <p>Pour plus d'informations, contactez : <a href="mailto:abir.belaroui@ifremer.fr">abir.belaroui@ifremer.fr</a></p>
+
+  <!-- Sections inspirées de methode-idea.org -->
+  <div class="additional">
+    <!-- ... contenu supplémentaire existant ... -->
   </div>
+
   <footer>
+    <ul class="footer-links">
+      <li><a href="#">Conditions d'utilisation</a></li>
+      <li><a href="#">Confidentialité</a></li>
+      <li><a href="#">Sécurité</a></li>
+      <li><a href="#">Gérer les cookies</a></li>
+    </ul>
     <p>&copy; 2025 Indicateurs de durabilité des entreprises conchylicoles</p>
   </footer>
+
   <script>
     document.querySelectorAll('button.header').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -244,7 +396,6 @@
       });
     });
   </script>
-
-
 </body>
 </html>
+
